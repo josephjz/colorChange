@@ -10,17 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var awesomeLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("😎  viewDidLoad() has run!")
-        awesomeLabel.text = "Fabulous? That's you!"
+        messageLabel.text = "Fabulous? That's you!"
     }
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
         print("🤠  The message button was pressed!")
-        awesomeLabel.text = "You are awesome!"
+        messageLabel.text = "You are awesome!"
     }
     
 }

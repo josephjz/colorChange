@@ -36,7 +36,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="awesomeLabel" destination="Her-5h-35C" id="UIZ-yM-V7a"/>
+                        <outlet property="messageLabel" destination="Her-5h-35C" id="jU8-rr-HvQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
