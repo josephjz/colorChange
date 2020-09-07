@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
     
+    var messagesIndex = 0
     var imageNumber = 0
     
     override func viewDidLoad() {
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-        //        print("🤠  The message button was pressed!")
+                print("🤠  The message button was pressed!")
         //        let awesomeMessage = "You are awesome!"
         //        let greatMessage = "You are great!"
         //        let bombMessage = "You are bomb!"
@@ -43,11 +44,26 @@ class ViewController: UIViewController {
         //        messageLabel.text = "You are awesome!"
         //        imageView.image = UIImage(named: "image0")
         
-        print(imageNumber)
-        //let imageName = "image" + String(imageNumber)
-        let imageName = "image\(imageNumber)" // string interpolation, anything that goes in () will be type casted to string
-        imageView.image = UIImage(named: imageName)
+        //        print(imageNumber)
+        //        let imageName = "image" + String(imageNumber)
+        //        let imageName = "image\(imageNumber)" // string interpolation, anything that goes in () will be type casted to string
+        //        imageView.image = UIImage(named: imageName)
+        //        imageNumber = imageNumber + 1
+        //        if imageNumber == 10 {
+        //            imageNumber = 0
+        //        }
+        //
+        var messages = ["You are awesome!", "You are great!", "You are fantastic!", "You are legendary!", "You are swifty!", "You are funny!", "You are magical!"]
+        
+        messageLabel.text = messages[messagesIndex]
+        imageView.image = UIImage(named: "image\(imageNumber)")
+        
+        messagesIndex = messagesIndex + 1
         imageNumber = imageNumber + 1
+            
+        if messagesIndex == messages.count {
+            messagesIndex = 0
+        }
         if imageNumber == 10 {
             imageNumber = 0
         }
