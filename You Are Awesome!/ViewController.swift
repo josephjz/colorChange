@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func messageButtonPressed(_ sender: UIButton) {
-                print("🤠  The message button was pressed!")
+        //        print("🤠  The message button was pressed!")
         //        let awesomeMessage = "You are awesome!"
         //        let greatMessage = "You are great!"
         //        let bombMessage = "You are bomb!"
@@ -53,21 +53,26 @@ class ViewController: UIViewController {
         //            imageNumber = 0
         //        }
         //
-        var messages = ["You are awesome!", "You are great!", "You are fantastic!", "You are legendary!", "You are swifty!", "You are funny!", "You are magical!"]
+                var messages = ["You are awesome!", "You are great!", "You are fantastic!", "You are legendary!", "You are swifty!", "You are funny!", "You are magical!"]
+        //
+        //        messageLabel.text = messages[messagesIndex]
+        //        imageView.image = UIImage(named: "image\(imageNumber)")
+        //
+        //        messagesIndex = messagesIndex + 1
+        //        imageNumber = imageNumber + 1
+        //
+        //        if messagesIndex == messages.count {
+        //            messagesIndex = 0
+        //        }
+        //        if imageNumber == 10 {
+        //            imageNumber = 0
+        //        }
         
-        messageLabel.text = messages[messagesIndex]
-        imageView.image = UIImage(named: "image\(imageNumber)")
+        var randomImage = Int.random(in: 0...9)
+        var randomMessage = Int.random(in: 0...messages.count-1)
         
-        messagesIndex = messagesIndex + 1
-        imageNumber = imageNumber + 1
-            
-        if messagesIndex == messages.count {
-            messagesIndex = 0
-        }
-        if imageNumber == 10 {
-            imageNumber = 0
-        }
-        
+        messageLabel.text = messages[randomMessage]
+        imageView.image = UIImage(named: "image\(randomImage)")
     }
 }
    
