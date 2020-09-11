@@ -54,6 +54,8 @@ class ViewController: UIViewController {
         //        }
         //
                 var messages = ["You are awesome!", "You are great!", "You are fantastic!", "You are legendary!", "You are swifty!", "You are funny!", "You are magical!"]
+                
+        var colors = [UIColor.red, UIColor.blue, UIColor.green, UIColor.purple, UIColor.systemPink]
         //
         //        messageLabel.text = messages[messagesIndex]
         //        imageView.image = UIImage(named: "image\(imageNumber)")
@@ -68,11 +70,13 @@ class ViewController: UIViewController {
         //            imageNumber = 0
         //        }
         
-        var randomImage = Int.random(in: 0...9)
+        //        var randomImage = Int.random(in: 0...9)
         var randomMessage = Int.random(in: 0...messages.count-1)
+        var randomColor = Int.random(in: 0...colors.count-1)
         
         messageLabel.text = messages[randomMessage]
-        imageView.image = UIImage(named: "image\(randomImage)")
+        messageLabel.textColor = colors[randomColor]
+        //        imageView.image = UIImage(named: "image\(randomImage)")
     }
 }
    
